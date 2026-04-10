@@ -1,0 +1,15 @@
+{
+  "name": "cg-ticket",
+  "version": "1.0.0",
+  "description": "CheatGlobal Discord ticket botu",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.22.1"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "token": "BOT_TOKEN",
+  "clientId": "APPLICATION_ID",
+  "guildId": "GUILD_ID",
+  "ticketPanelChannelId": "TICKET_PANEL_CHANNEL_ID",
+  "ticketCategoryId": "TICKET_CATEGORY_ID",
+  "logChannelId": "LOG_CHANNEL_ID",
+  "transcriptLogChannelId": "TRANSCRIPT_LOG_CHANNEL_ID",
+  "claimLogChannelId": "CLAIM_LOG_CHANNEL_ID",
+  "errorLogChannelId": "ERROR_LOG_CHANNEL_ID",
+  "developers": {
+    "ids": [
+      "DEVELOPER_USER_ID"
+    ]
+  },
+  "adminStatus": {
+    "enabled": true,
+    "ownerRoleIds": [
+      "OWNER_ROLE_ID"
+    ],
+    "logChannelId": "ADMIN_STATUS_LOG_CHANNEL_ID"
+  },
+  "supportRoleIds": [
+    "SUPPORT_ROLE_ID"
+  ],
+  "allowedClaimRoleIds": [
+    "SUPPORT_ROLE_ID"
+  ],
+  "ticketMentionRoleIds": [
+    "SUPPORT_ROLE_ID"
+  ],
+  "color": "#5865F2",
+  "branding": {
+    "guildName": "CheatGlobal",
+    "logoPath": "assets/images/123-thumb.png",
+    "logoUrl": "https://cheatglobal.com/styles/xenfocus/cheatglobal-logo.png",
+    "footerText": "CheatGlobal Destek Sistemi",
+    "websiteUrl": "https://cheatglobal.com"
+  },
+  "panel": {
+    "commandName": "ticket-panel",
+    "title": "CheatGlobal Destek",
+    "description": "Destek ekibiyle duzenli ve hizli iletisim icin ticket acabilirsiniz.",
+    "rulesTitle": "Kurallar",
+    "rules": [
+      "Gereksiz ticket acmayin.",
+      "Forum isminizi yazmadan ticket acmayin.",
+      "Detaylari acik ve net sekilde paylasin.",
+      "Ayni konu icin tekrar tekrar ticket acmayin."
+    ],
+    "createButtonLabel": "Talep Olustur",
+    "createButtonEmoji": "🎫",
+    "buttonStyle": "Secondary",
+    "bottomImagePath": "assets/images/123.png",
+    "footerLinkText": "Ticket sistemi lightning tarafindan yapilmistir.",
+    "footerLinkUrl": "https://github.com/easylightning",
+    "helperText": "Butona bastiktan sonra form acilir. Formu doldurduktan sonra kategori butonlarindan birini secersin.",
+    "ephemeralCategoryTitle": "Talep Turunu Sec",
+    "ephemeralCategoryDescription": "Asagidaki butonlardan dogru talep turunu sec. Bu mesaj sadece sana gorunur."
+  },
+  "modal": {
+    "title": "Talep Olustur",
+    "forumNameLabel": "Forum Isminiz",
+    "forumNamePlaceholder": "Forumdaki kullanici adinizi yazin",
+    "subjectLabel": "Talep Basligi",
+    "subjectPlaceholder": "Kisa ve net baslik yazin",
+    "detailLabel": "Detaylar",
+    "detailPlaceholder": "Sorununuzu veya sikayetinizi detayli sekilde aciklayin.",
+    "minDetailLength": 20,
+    "maxDetailLength": 1500
+  },
+  "cooldown": {
+    "enabled": true,
+    "seconds": 120,
+    "maxOpenTicketsPerUser": 2,
+    "sameCategoryBlock": true,
+    "message": "Yeni ticket acmak icin biraz beklemelisin."
+  },
+  "antiSpam": {
+    "enabled": true,
+    "maxAttempts": 4,
+    "windowSeconds": 300,
+    "blockSeconds": 1800,
+    "message": "Sistem seni gecici olarak ticket olusturmadan engelledi."
+  },
+  "claims": {
+    "enabled": true,
+    "allowUnclaim": true,
+    "allowReclaimByOthers": false
+  },
+  "tickets": {
+    "closeButtonLabel": "Kapat",
+    "closeButtonEmoji": "🔒",
+    "claimButtonLabel": "Sahiplen",
+    "claimButtonEmoji": "🛡️",
+    "unclaimButtonLabel": "Birak",
+    "unclaimButtonEmoji": "↩️",
+    "manageButtonLabel": "Uye Yonet",
+    "manageButtonEmoji": "👥",
+    "defaultReaction": "✅",
+    "autoArchiveDuration": 1440,
+    "closeArchive": true,
+    "addMemberSuccessMessage": "Uye tickete eklendi.",
+    "removeMemberSuccessMessage": "Uye ticketten cikarildi.",
+    "firstMessageTemplate": "{categoryIcon} **{categoryLabel}**\n👤 **Acan:** <@{ownerId}>\n🧾 **Forum Ismi:** `{forumName}`\n📝 **Baslik:** {subject}\n\n**Detaylar**\n{details}\n\n**Yetkili Notu**\nBu ticket kurallara aykiriysa islem uygulanabilir."
+  },
+  "forumTags": {
+    "enabled": true,
+    "byCategory": {
+      "user_report": [
+        "TAG_ID_1"
+      ],
+      "support": [
+        "TAG_ID_2"
+      ],
+      "staff_report": [
+        "TAG_ID_3"
+      ]
+    }
+  },
+  "transcripts": {
+    "enabled": true,
+    "folder": "transcripts",
+    "includeSystemMessages": false,
+    "includeEmbeds": true,
+    "includeAttachments": true,
+    "fileNameFormat": "ticket-{threadId}-{closedAt}.html"
+  },
+  "logging": {
+    "folder": "logs",
+    "errorFile": "errors.txt",
+    "combinedFile": "combined.txt",
+    "maxConsoleStack": 4000
+  },
+  "categories": [
+    {
+      "value": "user_report",
+      "label": "Kullanici Sikayeti",
+      "icon": "⚠️",
+      "buttonStyle": "Danger",
+      "prefix": "kullanici-sikayet",
+      "forumTagIds": [],
+      "guidance": [
+        "Sikayet ettiginiz kisiyi yazin.",
+        "Kanit veya ekran goruntusu varsa ekleyin."
+      ]
+    },
+    {
+      "value": "support",
+      "label": "Destek / Bilgi Alma",
+      "icon": "🛠️",
+      "buttonStyle": "Primary",
+      "prefix": "destek",
+      "forumTagIds": [],
+      "guidance": [
+        "Sorununuzu acik yazin.",
+        "Gerekirse siparis veya hesap bilgisi ekleyin."
+      ]
+    },
+    {
+      "value": "staff_report",
+      "label": "Yetkili Sikayeti",
+      "icon": "👮",
+      "buttonStyle": "Secondary",
+      "prefix": "yetkili-sikayet",
+      "forumTagIds": [],
+      "guidance": [
+        "Yetkilinin adini ve olayi yazin.",
+        "Mumkunse tarih ve kanit ekleyin."
+      ]
+    }
+  ]
+}
